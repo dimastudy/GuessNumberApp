@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">GuessNumber</string>
+    <string name="http_message">Помилка підключення до серверу</string>
+    <string name="io_message">Помилка при отриманні даних</string>
+    <string name="default_error_message">Виникла помилка!</string>
+    <string name="number_less">Занадто мале число</string>
+    <string name="number_bigger">Занадто велике число</string>
+    <string name="helper_text">Число повинно бути між 1 та 100 та не містити інших знаків*</string>
+    <string name="play_again">Грати знову</string>
+    <string name="lose_text">Ви програли. Спробуйте ще раз</string>
+    <string name="attempts_text">Кількість спроб: %1$s</string>
+    <string name="win_message">Ви виграли!</string>
+</resources>

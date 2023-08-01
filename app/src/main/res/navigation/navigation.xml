@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation.xml"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/guessNumberFragment"
+        android:name="com.justadev.guessnumber.presentation.ui.guessNumber.GuessNumberFragment"
+        android:label="fragment_guess_number"
+        tools:layout="@layout/fragment_guess_number" >
+        <action
+            android:id="@+id/action_guessNumberFragment_to_resultFragment"
+            app:destination="@id/resultFragment"
+            app:popUpTo="@id/guessNumberFragment"
+            app:popUpToInclusive="true"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.justadev.guessnumber.presentation.ui.start.StartFragment"
+        android:label="fragment_start_screen"
+        tools:layout="@layout/fragment_start_screen" >
+        <action
+            android:id="@+id/action_startFragment_to_guessNumberFragment"
+            app:destination="@id/guessNumberFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.justadev.guessnumber.presentation.ui.results.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" >
+        <action
+            android:id="@+id/action_resultFragment_to_guessNumberFragment"
+            app:destination="@id/guessNumberFragment" />
+        <argument
+            android:name="resultText"
+            app:argType="string" />
+    </fragment>
+</navigation>
